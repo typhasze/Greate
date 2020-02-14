@@ -8,67 +8,74 @@
     tools:context=".MainActivity" >
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
+        android:id="@+id/mytoolbar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="#009688"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/nearbyRestaurant"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
 
     <ImageButton
         android:id="@+id/nearbyRestaurant"
-        android:layout_width="205dp"
-        android:layout_height="337dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
         android:background="#00FFFFFF"
+        android:contentDescription="Shows nearby restaurant"
+        android:scaleType="fitCenter"
+        android:src="@drawable/nr"
         app:layout_constraintBottom_toTopOf="@+id/recordCalorie"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/randomRecipe"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-
-        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@+id/mytoolbar"
+        tools:src="@drawable/nr"
         tools:srcCompat="@drawable/nr" />
 
     <ImageButton
         android:id="@+id/randomRecipe"
-        android:layout_width="205dp"
-        android:layout_height="337dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/rr"
         app:layout_constraintBottom_toTopOf="@+id/selectRecipe"
         app:layout_constraintEnd_toStartOf="@+id/nearbyRestaurant"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@color/colorPrimaryDark"
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@+id/mytoolbar"
         tools:srcCompat="@drawable/rr" />
 
     <ImageButton
         android:id="@+id/selectRecipe"
-        android:layout_width="205dp"
-        android:layout_height="337dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#00FFFFFF"
+
+        android:scaleType="fitCenter"
+        android:src="@drawable/rs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/recordCalorie"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/randomRecipe"
-
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
+        tools:src="@drawable/rs"
         tools:srcCompat="@drawable/rs" />
 
     <ImageButton
         android:id="@+id/recordCalorie"
-        android:layout_width="205dp"
-        android:layout_height="337dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
         android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/rci"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/selectRecipe"
         app:layout_constraintTop_toBottomOf="@+id/nearbyRestaurant"
-
-        android:scaleType="fitCenter"
+        tools:src="@drawable/rci"
         tools:srcCompat="@drawable/rci" />
 </androidx.constraintlayout.widget.ConstraintLayout>
