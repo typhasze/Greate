@@ -5,10 +5,10 @@ public class RecipeData {
     private String itemName;
     private String itemDescription;
     private String itemRecipe;
-    private int calorieCount;
-    private int itemImage;
+    private String calorieCount;
+    private String itemImage;
 
-    public RecipeData(String itemName, String itemDescription, String itemRecipe, int calorieCount, int itemImage) {
+    public RecipeData(String itemName, String itemDescription, String itemRecipe, String calorieCount, String itemImage) {
         this.itemName = itemName;
         this.itemDescription = itemDescription;
         this.itemRecipe = itemRecipe;
@@ -28,11 +28,11 @@ public class RecipeData {
         return itemRecipe;
     }
 
-    public int getItemImage() {
+    public String getItemImage() {
         return itemImage;
     }
 
-    public int getCalorieCount() {
+    public String getCalorieCount() {
         return calorieCount;
     }
 }

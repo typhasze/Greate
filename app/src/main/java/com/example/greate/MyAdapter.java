@@ -35,10 +35,10 @@ public class MyAdapter extends  RecyclerView.Adapter<RecipeViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull final RecipeViewHolder holder, int position) {
 
-        holder.imageView.setImageResource(myRecipeList.get(position).getItemImage());
+        // holder.imageView.setImageResource(myRecipeList.get(position).getItemImage());
         holder.mTitle.setText(myRecipeList.get(position).getItemName());
         holder.mDescription.setText(myRecipeList.get(position).getItemDescription());
-        holder.mCalorie.setText(String.valueOf(myRecipeList.get(position).getCalorieCount()));
+        holder.mCalorie.setText(myRecipeList.get(position).getCalorieCount());
 
         holder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,16 +67,14 @@ class RecipeViewHolder extends RecyclerView.ViewHolder {
     TextView mTitle, mDescription, mCalorie;
     CardView mCardView;
 
-
-
     public RecipeViewHolder(View itemView) {
+
         super(itemView);
 
         imageView = itemView.findViewById(R.id.ivImage);
         mTitle = itemView.findViewById(R.id.tvTitle);
         mDescription = itemView.findViewById(R.id.tvDescription);
         mCalorie = itemView.findViewById(R.id.tvCalorie);
-
         mCardView = itemView.findViewById(R.id.myCardView);
     }
 }

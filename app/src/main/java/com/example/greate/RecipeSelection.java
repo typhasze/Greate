@@ -1,6 +1,8 @@
 package com.example.greate;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -15,6 +17,7 @@ public class RecipeSelection extends AppCompatActivity {
     List<RecipeData> myRecipeList;
     RecipeData mRecipeData;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,20 +31,28 @@ public class RecipeSelection extends AppCompatActivity {
         myRecipeList = new ArrayList<>();
 
 
-        mRecipeData = new RecipeData("Some Baked Asparagus", "Who doesn't love baked asparagus", "Baked Asparagus on Bread with Cheese", 250, R.drawable.baf);
-        myRecipeList.add(mRecipeData);
-
-        mRecipeData = new RecipeData("BCGP", "Food 2", "Food 2", 350, R.drawable.bcgp);
-        myRecipeList.add(mRecipeData);
-
-        mRecipeData = new RecipeData("KCSF", "Food 3", "Food 3", 450, R.drawable.kcsf);
-        myRecipeList.add(mRecipeData);
-
-        mRecipeData = new RecipeData("KHP", "Food 4", "Food 4", 550, R.drawable.khp);
-        myRecipeList.add(mRecipeData);
+//        mRecipeData = new RecipeData("Some Baked Asparagus", "Who doesn't love baked asparagus", "Baked Asparagus on Bread with Cheese", 250, R.drawable.baf);
+//        myRecipeList.add(mRecipeData);
+//
+//        mRecipeData = new RecipeData("BCGP", "Food 2", "Food 2", 350, R.drawable.bcgp);
+//        myRecipeList.add(mRecipeData);
+//
+//        mRecipeData = new RecipeData("KCSF", "Food 3", "Food 3", 450, R.drawable.kcsf);
+//        myRecipeList.add(mRecipeData);
+//
+//        mRecipeData = new RecipeData("KHP", "Food 4", "Food 4", 550, R.drawable.khp);
+//        myRecipeList.add(mRecipeData);
 
         MyAdapter myAdapter = new MyAdapter(RecipeSelection.this, myRecipeList);
         mRecyclerView.setAdapter(myAdapter);
+
+
+
+    }
+
+    public void btn_uploadActivity(View view) {
+
+        startActivity(new Intent(this, UploadRecipe.class));
 
     }
 }
