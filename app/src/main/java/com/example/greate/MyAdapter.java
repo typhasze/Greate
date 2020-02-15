@@ -55,6 +55,8 @@ public class MyAdapter extends  RecyclerView.Adapter<RecipeViewHolder>{
                 intent.putExtra("Image", myRecipeList.get(holder.getAdapterPosition()).getItemImage());
                 intent.putExtra("Description", myRecipeList.get(holder.getAdapterPosition()).getItemDescription());
                 intent.putExtra("Title", myRecipeList.get(holder.getAdapterPosition()).getItemName());
+                intent.putExtra("RecipeTxt", myRecipeList.get(holder.getAdapterPosition()).getItemRecipe());
+                intent.putExtra("Calorie", myRecipeList.get(holder.getAdapterPosition()).getCalorieCount());
                 mContext.startActivity(intent);
 
             }

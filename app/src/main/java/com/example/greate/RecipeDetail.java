@@ -6,9 +6,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.squareup.picasso.Picasso;
+
 public class RecipeDetail extends AppCompatActivity {
 
-    TextView recipeDescription, recipeTitle;
+    TextView recipeDescription, recipeTitle, recipeText, recipeCalorie;
     ImageView recipeImage;
 
     @Override
@@ -16,9 +18,11 @@ public class RecipeDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_detail);
 
-        recipeDescription = (TextView)findViewById(R.id.txtRecipe);
+        recipeDescription = (TextView)findViewById(R.id.txtDescription);
         recipeImage = (ImageView)findViewById(R.id.ivImage2);
         recipeTitle = (TextView)findViewById(R.id.txtTitle);
+        recipeText = (TextView)findViewById(R.id.txtRecipe);
+        recipeCalorie = (TextView)findViewById(R.id.calorieCount2);
 
         Bundle mBundle = getIntent().getExtras();
 
@@ -26,8 +30,12 @@ public class RecipeDetail extends AppCompatActivity {
 
             recipeDescription.setText(mBundle.getString("Description"));
             recipeTitle.setText(mBundle.getString("Title"));
+            recipeText.setText(mBundle.getString("RecipeTxt"));
+            recipeCalorie.setText(mBundle.getString("Calorie"));
+
             //recipeImage.setImageResource(mBundle.getInt("Image"));
-            //Picasso.get().load(mBundle.getInt("Image")).into(recipeImage);
+            //Picasso.get().load(myRecipeList.get(position).getItemImage()).into(holder.imageView);
+            Picasso.get().load(mBundle.getString("Image")).into(recipeImage);
 
         }
     }
