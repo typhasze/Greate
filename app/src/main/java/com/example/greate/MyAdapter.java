@@ -12,7 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
+
 
 public class MyAdapter extends  RecyclerView.Adapter<RecipeViewHolder>{
 
@@ -32,10 +35,14 @@ public class MyAdapter extends  RecyclerView.Adapter<RecipeViewHolder>{
         return new RecipeViewHolder(mView);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull final RecipeViewHolder holder, int position) {
 
-        // holder.imageView.setImageResource(myRecipeList.get(position).getItemImage());
+
+        Picasso.get().load(myRecipeList.get(position).getItemImage()).into(holder.imageView);
+        //Glide.with(mContext).load(myRecipeList.get(position).getItemImage()).into(holder.imageView);
+        //holder.imageView.setImageResource(myRecipeList.get(position).getItemImage());
         holder.mTitle.setText(myRecipeList.get(position).getItemName());
         holder.mDescription.setText(myRecipeList.get(position).getItemDescription());
         holder.mCalorie.setText(myRecipeList.get(position).getCalorieCount());

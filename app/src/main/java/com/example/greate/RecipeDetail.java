@@ -26,7 +26,8 @@ public class RecipeDetail extends AppCompatActivity {
 
             recipeDescription.setText(mBundle.getString("Description"));
             recipeTitle.setText(mBundle.getString("Title"));
-            recipeImage.setImageResource(mBundle.getInt("Image"));
+            //recipeImage.setImageResource(mBundle.getInt("Image"));
+            //Picasso.get().load(mBundle.getInt("Image")).into(recipeImage);
 
         }
     }
