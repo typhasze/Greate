@@ -40,7 +40,7 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
     private Marker currentUserLocationMarker;
     private static final int Request_User_Location_Code = 99;
 
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_maps);
