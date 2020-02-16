@@ -27,10 +27,18 @@ public class MainActivity extends AppCompatActivity {
         recordCalorie = (ImageButton) findViewById(R.id.recordCalorie);
         nearbyRestaurant = (ImageButton) findViewById(R.id.nearbyRestaurant);
         randomRecipe = (ImageButton) findViewById(R.id.randomRecipe);
+
         recipeSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openRecipeSelect();
+            }
+        });
+
+        nearbyRestaurant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNearbyRestaurant();
             }
         });
     }
@@ -45,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openRecipeSelect() {
         Intent intent = new Intent(this, RecipeSelection.class);
+        startActivity(intent);
+    }
+
+    public void openNearbyRestaurant() {
+        Intent intent = new Intent(this, GoogleMapsActivity.class);
         startActivity(intent);
     }
 }
