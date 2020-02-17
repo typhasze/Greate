@@ -10,37 +10,38 @@
     <ImageView
         android:id="@+id/iv_foodImage"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/kcsf" />
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/no_image_available" />
 
     <EditText
         android:id="@+id/inputRecipeName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_round"
         android:ems="10"
         android:hint="Recipe name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_foodImage" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_foodImage"
+        />
 
     <EditText
         android:id="@+id/inputCalorie"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_round"
         android:ems="10"
         android:hint="Calorie count of recipe"
         android:inputType="textPersonName"
@@ -52,10 +53,9 @@
         android:id="@+id/inputRecipe"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_round"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Enter steps of the recipe"
@@ -69,9 +69,9 @@
         android:id="@+id/inputDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_round"
         android:ems="10"
         android:hint="Short description"
         android:inputType="textPersonName"
@@ -90,7 +90,8 @@
         app:layout_constraintBottom_toTopOf="@+id/uploadRecipe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="btnSelectImage"/>
+        android:onClick="btnSelectImage"
+        android:background="@drawable/button_round" />
 
     <Button
         android:id="@+id/uploadRecipe"
@@ -98,11 +99,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:text="Upload Recipe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="btnUploadRecipe"/>
+        android:onClick="btnUploadRecipe"
+        android:background="@drawable/button_round"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
