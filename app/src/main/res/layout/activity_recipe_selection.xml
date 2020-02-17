@@ -18,11 +18,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        app:srcCompat="@android:drawable/ic_menu_add"
+        app:srcCompat="@drawable/ic_add_black_48dp"
+        android:backgroundTint="@color/colorPrimary"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="40dp"
-        android:backgroundTint="@color/gradientTop"
+        android:layout_margin="20dp"
+        android:elevation="8dp"
         android:onClick="btn_uploadActivity"/>
 
 </RelativeLayout>

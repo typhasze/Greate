@@ -24,8 +24,7 @@
         android:id="@+id/nearbyRestaurant"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
-        android:background="#00FFFFFF"
+        android:background="?android:selectableItemBackground"
         android:contentDescription="Shows nearby restaurant"
         android:scaleType="fitCenter"
         android:src="@drawable/nr"
@@ -40,7 +39,7 @@
         android:id="@+id/randomRecipe"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#00FFFFFF"
+        android:background="?android:selectableItemBackground"
         android:scaleType="fitCenter"
         android:src="@drawable/rr"
         app:layout_constraintBottom_toTopOf="@+id/selectRecipe"
@@ -53,8 +52,7 @@
         android:id="@+id/selectRecipe"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#00FFFFFF"
-
+        android:background="?android:selectableItemBackground"
         android:scaleType="fitCenter"
         android:src="@drawable/rs"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,8 +66,7 @@
         android:id="@+id/recordCalorie"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
-        android:background="#00FFFFFF"
+        android:background="?android:selectableItemBackground"
         android:scaleType="fitCenter"
         android:src="@drawable/rci"
         app:layout_constraintBottom_toBottomOf="parent"
