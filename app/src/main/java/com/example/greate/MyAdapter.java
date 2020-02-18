@@ -41,8 +41,6 @@ public class MyAdapter extends  RecyclerView.Adapter<RecipeViewHolder>{
 
 
         Picasso.get().load(myRecipeList.get(position).getItemImage()).into(holder.imageView);
-        //Glide.with(mContext).load(myRecipeList.get(position).getItemImage()).into(holder.imageView);
-        //holder.imageView.setImageResource(myRecipeList.get(position).getItemImage());
         holder.mTitle.setText(myRecipeList.get(position).getItemName());
         holder.mDescription.setText(myRecipeList.get(position).getItemDescription());
         holder.mCalorie.setText(myRecipeList.get(position).getCalorieCount());

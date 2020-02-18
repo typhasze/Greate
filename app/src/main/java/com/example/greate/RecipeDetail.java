@@ -3,9 +3,7 @@ package com.example.greate;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.squareup.picasso.Picasso;
 
 public class RecipeDetail extends AppCompatActivity {
@@ -32,9 +30,6 @@ public class RecipeDetail extends AppCompatActivity {
             recipeTitle.setText(mBundle.getString("Title"));
             recipeText.setText(mBundle.getString("RecipeTxt"));
             recipeCalorie.setText(mBundle.getString("Calorie"));
-
-            //recipeImage.setImageResource(mBundle.getInt("Image"));
-            //Picasso.get().load(myRecipeList.get(position).getItemImage()).into(holder.imageView);
             Picasso.get().load(mBundle.getString("Image")).into(recipeImage);
 
         }

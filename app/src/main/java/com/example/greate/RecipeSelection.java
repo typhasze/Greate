@@ -63,13 +63,11 @@ public class RecipeSelection extends AppCompatActivity {
                 myAdapter.notifyDataSetChanged();
 
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
-
     }
 
     public void btn_uploadActivity(View view) {
